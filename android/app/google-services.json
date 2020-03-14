@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "455377817174",
+    "firebase_url": "https://ceresthon2020.firebaseio.com",
+    "project_id": "ceresthon2020",
+    "storage_bucket": "ceresthon2020.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:455377817174:android:a78982f9726ac5a97cf5f7",
+        "android_client_info": {
+          "package_name": "com.example.ceresthon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "455377817174-gvvja1m4ao4k2tn7ltjpf0cla0po9ng0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgND4zDitExY35ZXTnV6rp3c4Qts6dhA4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "455377817174-gvvja1m4ao4k2tn7ltjpf0cla0po9ng0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

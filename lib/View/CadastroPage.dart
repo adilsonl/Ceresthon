@@ -1,3 +1,5 @@
+import 'package:ceresthon/Model/user.dart';
+import 'package:ceresthon/Services/userServices.dart';
 import 'package:flutter/material.dart';
 
 
@@ -41,7 +43,10 @@ class _CadastroPageState extends State<CadastroPage> {
             RaisedButton(
             color: Colors.green[600],
             child: Text("Logar",style: TextStyle(color: Colors.white),),
-            onPressed:(){})
+            onPressed:()async{
+              User user = User(cpf: '',data: "",senha: "",tel: "", id: "",nome: "");
+              UserServices.addUser(user);
+            })
           ],
         ),),
     );

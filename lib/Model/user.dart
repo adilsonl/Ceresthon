@@ -5,6 +5,7 @@ class User {
     String tel;
     String id;
     String senha;
+    String email;
 
     User({
         this.nome,
@@ -13,6 +14,7 @@ class User {
         this.tel,
         this.id,
         this.senha,
+        this.email
     });
 
      User.fromJson(Map<String, dynamic> json){
@@ -22,6 +24,7 @@ class User {
         tel= json["tel"];
         id=json["id"];
         senha= json["senha"];
+        email = json["email"];
      }
        
     
@@ -33,5 +36,6 @@ class User {
         "tel": tel,
         "id": id,
         "senha": senha,
+        "email": email
     };
 }

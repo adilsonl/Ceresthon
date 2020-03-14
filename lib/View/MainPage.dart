@@ -1,6 +1,9 @@
+import 'package:ceresthon/Model/user.dart';
 import 'package:flutter/material.dart';
 
 class MainPage extends StatefulWidget {
+  final User user;
+  MainPage(this.user);
   @override
   _MainPageState createState() => _MainPageState();
 }

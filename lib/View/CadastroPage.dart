@@ -9,6 +9,14 @@ class CadastroPage extends StatefulWidget {
 }
 
 class _CadastroPageState extends State<CadastroPage> {
+    TextEditingController emailController = TextEditingController();
+    TextEditingController nomeController = TextEditingController();
+    TextEditingController dataController = TextEditingController();
+    TextEditingController cpfController = TextEditingController();
+    TextEditingController telController = TextEditingController();
+    TextEditingController senhaController = TextEditingController();
+
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -16,36 +24,51 @@ class _CadastroPageState extends State<CadastroPage> {
         child: Column(
           children: <Widget>[
             TextFormField(
+              controller: emailController,
             decoration: InputDecoration(
               labelText: "Email"
             ),
           ),
           TextFormField(
+            controller: nomeController,
             decoration: InputDecoration(
               labelText: "Nome"
             ),
           ),
           TextFormField(
+            controller: dataController,
             decoration: InputDecoration(
               labelText: "Data Nascimento"
             ),
           ),
             TextFormField(
+            controller: cpfController,
             decoration: InputDecoration(
               labelText: "CPF"
             ),
           ),
           TextFormField(
+            controller: telController,
             decoration: InputDecoration(
               labelText: "Telefone"
             ),
           ),
+          TextFormField(
+            controller: senhaController,
+            decoration: InputDecoration(
+              labelText: "Senha"
+            ),
+          ),
             RaisedButton(
             color: Colors.green[600],
-            child: Text("Logar",style: TextStyle(color: Colors.white),),
+            child: Text("Cadastrar",style: TextStyle(color: Colors.white),),
             onPressed:()async{
-              User user = User(cpf: '',data: "",senha: "",tel: "", id: "",nome: "");
-              UserServices.addUser(user);
+              User user = User(cpf: cpfController.text,data: dataController.text,senha: senhaController.text,
+              tel: telController.text, id: "",nome: nomeController.text,
+              email: emailController.text);
+              String docid = await UserServices.addUser(user);
+              user.id = docid;
+              await UserServices.editUser(user);
             })
           ],
         ),),
